@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: tan;
+    color: maroon;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background: maroon;
+    color: black;
+    padding: 40px 28px;
+}
+
+.sidebar h1 {
+    font-family: "Sora", sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    color: black;
+}
+
+.sidebar label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid black;
+    background: lightgray;
+    color: black;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.sidebar input:focus {
+    outline: none;
+    border-color: brown;
+}
+
+.sidebar button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    background: beige;
+    color: #101828;
+    border: none;
+    border-radius: 8px;
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.sidebar button:hover {
+    background: tan;
+}
+
+/* Main content */
+.content {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-content: start;
+}
+
+.stat-card, .chart-card, .list-card {
+    background: beige;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+}
+
+.stat-card {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.stat-value {
+    font-family: "Sora", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #101828;
+}
+
+.chart-card h2, .list-card h2 {
+    font-family: "Sora", sans-serif;
+    font-size: 40px;
+    margin-bottom: 16px;
+    color: #101828;
+}
+#category-chart {
+    max-width: 280px;
+    max-height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+#expense-list {
+    list-style: none;
+    max-width: 1000px;
+    max-height: 500px;
+}
+
+#expense-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #EEF1F4;
+    font-size: 14px;
+}
+
+#expense-list li:last-child {
+    border-bottom: none;
+}
+
+#expense-list button {
+    margin-left: 8px;
+    padding: 6px 12px;
+    border: 1px solid white;
+    background: white;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    color: black;
+}
+
+#expense-list button:hover {
+    background: #F7F8FA;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+    .content {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+}
