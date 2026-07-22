@@ -3,7 +3,6 @@
 A full-stack expense tracking app that lets you add, edit, delete, and visualize your spending by category. Built as a learning project to practice full-stack development with a C#/.NET backend and a vanilla JavaScript frontend.
 
 ![Expense Tracker Screenshot](screenshot.png)
-*(Add a screenshot of your app here — take one after your next run and save it as `screenshot.png` in this folder)*
 
 ## Features
 
@@ -97,4 +96,4 @@ expense-tracker/
 
 ## Author
 
-Built by [Your Name] as a personal learning project.
+Built by Jacquelyn Diep as a personal learning project.
